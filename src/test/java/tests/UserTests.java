@@ -1,13 +1,22 @@
 package tests;
 
+import io.qameta.allure.*;
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.Matchers.*;
 
+@Epic("ReqRes API Testing")
+@Feature("User Management")
+
 public class UserTests extends BaseTest {
 
     @Test
+    @Story("Get Users")
+    @Description("Verify that users list is returned successfully")
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Iulia")
+
     public void getUsersListTest() {
 
         // Test Case:
@@ -31,6 +40,11 @@ public class UserTests extends BaseTest {
     }
 
     @Test
+    @Story("Create User")
+    @Description("Verify that a new user can be created")
+    @Severity(SeverityLevel.BLOCKER)
+    @Owner("Iulia")
+
     public void createUserTest() {
 
         // Test Case:
@@ -63,6 +77,11 @@ public class UserTests extends BaseTest {
     }
 
     @Test
+    @Story("Update User")
+    @Description("Verify that user data can be updated")
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Iulia")
+
     public void updateUserTest() {
 
         // Test Case:
@@ -94,6 +113,11 @@ public class UserTests extends BaseTest {
     }
 
     @Test
+    @Story("Delete User")
+    @Description("Verify that user can be deleted")
+    @Severity(SeverityLevel.NORMAL)
+    @Owner("Iulia")
+
     public void deleteUserTest() {
 
         // Test Case:
@@ -114,6 +138,11 @@ public class UserTests extends BaseTest {
     }
 
     @Test
+    @Story("Verify Specific User")
+    @Description("Verify that specific user details are correct")
+    @Severity(SeverityLevel.MINOR)
+    @Owner("Iulia")
+
     public void verifySpecificUserTest() {
 
         // Test Case:

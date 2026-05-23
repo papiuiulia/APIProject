@@ -1,13 +1,22 @@
 package tests;
 
+import io.qameta.allure.*;
 import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.Matchers.*;
 
+@Epic("ReqRes API Testing")
+@Feature("Login Feature")
+
 public class LoginTests extends BaseTest {
 
     @Test
+    @Story("Successful Login")
+    @Description("Verify that user can login with valid credentials")
+    @Severity(SeverityLevel.CRITICAL)
+    @Owner("Iulia")
+
     public void successfulLoginTest() {
 
         // Test Case:
@@ -39,6 +48,11 @@ public class LoginTests extends BaseTest {
     }
 
     @Test
+    @Story("Login Validation")
+    @Description("Verify that login fails when password is missing")
+    @Severity(SeverityLevel.NORMAL)
+    @Owner("Iulia")
+
     public void loginWithoutPasswordTest() {
 
         // Test Case:

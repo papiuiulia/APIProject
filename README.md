@@ -52,3 +52,34 @@ https://reqres.in/
 
 - Rulare din IntelliJ IDEA: Click dreapta pe clasă + Run 'Tests'
 - Rulare din terminal: mvn test
+
+# Allure Reports
+
+Proiectul utilizează Allure Reports pentru generarea rapoartelor automate de execuție ale testelor API.
+
+Allure oferă:
+- status teste (Passed / Failed)
+- descriere scenarii
+- severitate teste
+- timp execuție
+- organizare pe Features și Stories
+- raport vizual interactiv
+
+# Configurare, rulare si generare Allure
+
+- Dependințe Maven - În fișierul `pom.xml` au fost adăugate dependințe
+- Rulare teste: mvn clean test iar dupa executie se genereaza folderul allure-results
+- Pentru deschiderea raportului: allure serve allure-results
+
+# Annotations utilizate
+
+În cadrul testelor au fost utilizate următoarele annotations Allure:
+
+| Annotation | Rol |
+|---|---|
+| `@Epic` | categorie principală |
+| `@Feature` | funcționalitate |
+| `@Story` | scenariu testat |
+| `@Description` | descriere test |
+| `@Severity` | nivel importanță |
+| `@Owner` | autor test |

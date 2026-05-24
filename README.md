@@ -83,3 +83,5 @@ Allure oferă:
 | `@Description` | descriere test |
 | `@Severity` | nivel importanță |
 | `@Owner` | autor test |
+
+<img width="1316" height="1022" alt="Screenshot 2026-05-24 170659" src="https://github.com/user-attachments/assets/58b88e88-6cdd-40d1-98c1-358ff2ba0b4d" />
